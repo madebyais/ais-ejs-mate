@@ -1,21 +1,13 @@
-# ejs-mate
-
-## Status
-- [![NPM version](https://badge.fury.io/js/ejs-mate.png)](http://badge.fury.io/js/ejs-mate)
-- [![Build Status](https://travis-ci.org/JacksonTian/ejs-mate.png?branch=master)](https://travis-ci.org/JacksonTian/ejs-mate)
-- [![Dependencies Status](https://david-dm.org/JacksonTian/ejs-mate.png)](https://david-dm.org/JacksonTian/ejs-mate)
-- [![Coverage Status](https://coveralls.io/repos/JacksonTian/ejs-mate/badge.png)](https://coveralls.io/r/JacksonTian/ejs-mate)
+# ais-ejs-mate
 
 ## About
 
-Express 4.x `layout`, `partial` and `block` template functions for the EJS template engine.
-
-Previously also offered `include` but you should use EJS 1.0.x's own directive for that now.
+A customized ejs-mate for AIS Framework. Express 4.x `layout`, `partial` and `block` template functions for the EJS template engine.
 
 ## Installation
 
 ```bash
-$ npm install ejs-mate --save
+$ npm install ais-ejs-mate --save
 ```
 
 (`--save` automatically writes to your `package.json` file, tell your friends)
@@ -51,7 +43,7 @@ When rendered by an Express 4.0 app:
 
 ```js
 var express = require('express'),
-  engine = require('ejs-mate'),
+  engine = require('ais-ejs-mate')(),
   app = express();
 
 // use ejs-locals for all ejs templates:
@@ -85,6 +77,12 @@ You get the following result:
 ```
 
 Note, if you haven't seen it before, this example uses trailing dashes in the EJS includes to slurp trailing whitespace and generate cleaner HTML. It's not strictly necessary.
+
+If you want to change the `open` and `close` tag, all you have to do is define it on init:
+
+```js
+var engine = require('ais-ejs-mate')({ open: '{{', close: '}}' })
+```
 
 ## Features
 
@@ -156,7 +154,7 @@ When called anywhere inside a template, this adds the given view to that templat
 
 ## Credits
 
-This library is a fork from Robert Tom Carden's [ejs-locals](https://github.com/RandomEtc/ejs-locals), and the partial function remains relatively untouched from there (aside from cache support). Robert is still updating his library and it now supports other template engines - check it out!
+This library is a fork from Jackson Tian's [ejs-mate](https://github.com/JacksonTian/ejs-mate), and the partial function remains relatively untouched from there (aside from cache support). Robert is still updating his library and it now supports other template engines - check it out!
 
 ## License
 
@@ -167,6 +165,8 @@ Copyright (c) 2012 Robert Sköld <robert@publicclass.se>
 Copyright (c) 2012 Tom Carden <tom@tom-carden.co.uk>
 
 Copyright (c) 2014 Jackson Tian <shyvo1987@gmail.com>
+
+Copyright (c) 2015 Faris <faris@appkitchens.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

@@ -1,5 +1,5 @@
 var express = require('express'),
-  engine = require('../'),
+  engine = require('../')(),
   app = express();
 
 // use ejs-locals for all ejs templates:
