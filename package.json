@@ -8,7 +8,7 @@
   ],
   "name": "ais-ejs-mate",
   "description": "A customized ejs-mate for AIS Framework - Express 4.x locals for layout, partial.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/madebyais/ais-ejs-mate"

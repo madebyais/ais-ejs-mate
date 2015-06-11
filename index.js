@@ -65,9 +65,10 @@ module.exports = function(opts){
    *
    */
 
-  return function(file, options, fn){
-  // var renderFile = module.exports = function(file, options, fn){
+  var renderFile;
 
+  return renderFile = function(file, options, fn){
+  
     // Express used to set options.locals for us, but now we do it ourselves
     // (EJS does some __proto__ magic to expose these funcs/values in the template)
     if (!options.locals) {
